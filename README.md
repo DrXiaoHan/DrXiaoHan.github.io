@@ -4,7 +4,7 @@ This personal blog is built based on a template [Clean Blog](http://startbootstr
 
 ## Blog Launch
 
-This blog was initally launched on 11.Febuary.2023
+This blog was initally launched on 11 Febuary 2023
 
 ## Blog Updates
 
