@@ -14,7 +14,7 @@ This blog was initally launched on xx.xx.2023
 
 Copyright 2023 Xiao Han
 
-## Template use and Modification
+## Template Use and Modification
 
 This template was used by Xiao Han and modified according to the blog contents.
 
