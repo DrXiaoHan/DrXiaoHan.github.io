@@ -14,7 +14,7 @@ This blog was initally launched on 11 Febuary 2023
 
 Copyright 2023 Xiao Han
 
-# [Blog Template]
+# [Blog Template](https://startbootstrap.com/theme/clean-blog)
 
 This template was used by Xiao Han and modified according to the blog contents.
 
