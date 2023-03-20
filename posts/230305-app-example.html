@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Handle Index</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body>
+
+    <header class="intro-header" style="background-image: url('post-img/230305-app-example-cover.jpg')">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <div class="post-heading">
+                      <h1>Innovativity Estimator - Handle Index</h1>
+                      <h2 class="subheading">(Example v0.1)</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+   </header>
+
+   <article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+              <form>
+                <p>
+                  <label for="input1">Identification of the Problem:</label><br>
+                  <select id="input1" name="input1" style="word-wrap: break-word;">
+                    <option value="1">The problem could affect everyone relevant.</option>
+                    <option value="0.8">Problem affects majority of relevant individuals.</option>
+                    <option value="0.6">Problem is situational and affects a specific group.</option>
+                    <option value="0.4">Possible issue may not require solution.</option>
+                    <option value="0.2">The problem may be purely hypothetical.</option>
+                    <option value="0">There is no issue to be addressed.</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="input2">Novelty of the Solution:</label><br>
+                  <select id="input2" name="input2" style="word-wrap: break-word;">
+                    <option value="0">Equivalent to an existing solution.</option>
+                    <option value="1">Completely new idea.</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="input3">Solubility:</label><br>
+                  <select id="input3" name="input3" style="word-wrap: break-word;">
+                    <option value="1">The problem is completely solved.</option>
+                    <option value="0.5">A major portion of the problem has been resolved.</option>
+                    <option value="0">The majority or the entire problem is still unresolved.</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="input4">Degree of verification:</label><br>
+                  <select id="input4" name="input4" style="word-wrap: break-word;">
+                    <option value="1">Solution is demonstrable to any audience.</option>
+                    <option value="0.8">Solution is non-controversial.</option>
+                    <option value="0.6">Solution is disputed by a third party.</option>
+                    <option value="0.4">Solution is disputed by multiple third parties.</option>
+                    <option value="0.2">Solution is not widely believed to be effective.</option>
+                    <option value="0">Case of fraud is confirmed.</option>
+                  </select>
+                </p>
+                <p>
+                  <label for="input5">Acceptability of the Compromised Features:</label><br>
+                  <select id="input5" name="input5" style="word-wrap: break-word;">
+                    <option value="1">The compromised feature is unnoticeable.</option>
+                    <option value="0.8">The compromised feature is noticeable, but it is tolerable.</option>
+                    <option value="0.6">Compromised feature is acceptable as a trade-off for the solution.</option>
+                    <option value="0.4">Compromised feature causes bigger problem than it solves.</option>
+                    <option value="0.2">Multiple additional problems are caused by the compromised feature.</option>
+                    <option value="0">The compromised feature is intolarable.</option>
+                  </select>
+                </p>
+              </form>
+              <div id="result">
+                <h2> <br>Your Innovativity Estimating Result is:<!-- Result will be displayed here --></h2>
+              </div>
+              <script>
+                // Get the form inputs
+                var input1 = document.getElementById("input1");
+                var input2 = document.getElementById("input2");
+                var input3 = document.getElementById("input3");
+                var input4 = document.getElementById("input4");
+                var input5 = document.getElementById("input5");
+                var resultDiv = document.getElementById("result");
+
+                // Function to calculate the output
+                function calculateOutput() {
+                  var output = input1.value * input2.value * input3.value * input4.value * input5.value
+                  output = Math.round(output * 10) / 10;
+
+                  // Determine the handle based on the output
+                  var handle;
+                  if (output >= 0.8 && output <= 1) {
+                    handle = "1";
+                  } else if (output >= 0.5 && output < 0.8) {
+                    handle = "2";
+                  } else if (output >= 0.2 && output < 0.5) {
+                    handle = "3";
+                  } else if (output >= 0.1 && output < 0.2) {
+                    handle = "4";
+                  } else {
+                    handle = ">4";
+                  }
+
+                  // Update the result div with the output and handle
+                  resultDiv.innerHTML = "<h2><br>Handle Index: " + handle + "</h2>";
+                }
+
+                // Add change event listeners to the form inputs
+                input1.addEventListener("change", function() {
+                  calculateOutput();
+                });
+                input2.addEventListener("change", function() {
+                  calculateOutput();
+                });
+                input3.addEventListener("change", function() {
+                  calculateOutput();
+                });
+                input4.addEventListener("change", function() {
+                  calculateOutput();
+                });
+                input5.addEventListener("change", function() {
+                  calculateOutput();
+                });
+              </script>
+ 
+              <br>
+              <br>
+              <br>
+
+    <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center"></ul>
+                  <p class="copyright text-muted">Copyright &copy; Xiao Han 2023. Handle Index tool is free for both personal and commercial use.</p>
+              </div>
+          </div>
+      </div>
+   </footer>
+   <script src="../vendor/jquery/jquery.min.js"></script>
+   <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+   <script src="../js/jqBootstrapValidation.js"></script>
+   <script src="../js/contact_me.js"></script>
+   <script src="../js/clean-blog.min.js"></script>
+  
+  </body>
+  
+</html>
