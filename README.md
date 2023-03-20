@@ -8,7 +8,7 @@ This blog was initally launched on 11 Febuary 2023
 
 ## Blog Updates
 
--
+-Article 'Some Thoughts about Innovation' was published on 05 March 2023, updated on 18 March 2023.
 
 ## Blog Copyright
 
