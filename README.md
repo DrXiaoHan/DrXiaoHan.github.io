@@ -12,7 +12,7 @@ This blog was initally launched on 11 Febuary 2023
 
 ## Blog Copyright
 
-Copyright 2023 Xiao Han
+Copyright 2023-2024 Xiao Han
 
 # [Blog Template](https://startbootstrap.com/theme/clean-blog)
 
